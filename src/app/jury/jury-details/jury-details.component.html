@@ -1,0 +1,18 @@
+<h2>Jury Details</h2>
+
+<hr/>
+<div *ngIf="jury">
+    <div>
+        <label><b>Nom: </b></label> {{jury.jury_nom}}
+    </div>
+    <div>
+        <label><b>Prenom: </b></label> {{jury.jury_prenom}}
+    </div>
+    <div>
+        <label><b>Role: </b></label> {{jury.jury_role}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Jury List</button><br>

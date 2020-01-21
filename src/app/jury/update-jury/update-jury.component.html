@@ -1,0 +1,21 @@
+<h3>Update Jury</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" class="form-control" id="jury_nom" required [(ngModel)]="jury.jury_nom" name="jury_nom">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Prenom</label>
+            <input type="text" class="form-control" id="jury_prenom" required [(ngModel)]="jury.jury_prenom" name="jury_prenom">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Role</label>
+            <input type="text" class="form-control" id="jury_role" required [(ngModel)]="jury.jury_role" name="jury_role">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

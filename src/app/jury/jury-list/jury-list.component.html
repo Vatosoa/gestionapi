@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Jury List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let jury of jurys | async">
+                    <td>{{jury.jury_nom}}</td>
+                    <td>{{jury.jury_prenom}}</td>
+                    <td>{{jury.jury_role}}</td>
+                    <td><button (click)="deleteJury(jury.id_jury)" class="btn btn-danger">Delete</button>
+                        <button (click)="juryDetails(jury.id_jury)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                        <button (click)="updateJury(jury.id_jury)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
